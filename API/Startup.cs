@@ -21,6 +21,7 @@ namespace PetSupplies
     public class Startup
     {
         private IConfiguration _config;
+            readonly string AllowOrigin = "AllowOrigin";
         public Startup(IConfiguration configuration)
         {
             _config = configuration;
@@ -40,6 +41,11 @@ namespace PetSupplies
             });
             
             services.AddControllers();
+
+            services.AddCors(options => {
+            options.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());
+             });
+             
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "PetSupplies", Version = "v1" });
@@ -63,6 +69,8 @@ namespace PetSupplies
             app.UseStaticFiles();
 
             app.UseRouting();
+
+        app.UseCors(AllowOrigin);
 
             app.UseAuthorization();
 

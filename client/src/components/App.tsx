@@ -7,7 +7,7 @@ import Footer from './Footer';
 import '../reset.css';
 import '../App.css';
 
-import { store } from '../store';
+import { store } from '../state';
 
 const App = () => {
   return (

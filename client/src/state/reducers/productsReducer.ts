@@ -1,4 +1,4 @@
-import { IProduct } from './../Interfaces/IProduct';
+import { IProduct } from '../Interfaces/IProduct';
 import { ActionType } from '../action-types';
 import { Action } from '../actions';
 import { RepositoriesState } from '../Interfaces/RepositoriesState';
@@ -25,9 +25,10 @@ const initialState: RepositoriesState = {
     case ActionType.SEARCH_REPOSITORIES_ERROR: {
       return { loading: false, error: action.payload, data: [] };
     }
+    default:
+  return state;
   }
 
-  return state;
 };
 
 export default reducer;;

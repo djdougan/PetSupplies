@@ -1,25 +1,18 @@
 import * as React from 'react';
+import { IProduct } from '../state/Interfaces/IProduct';
+import { IProductType } from '../state/Interfaces/IProductType';
 
-import { useState } from 'react';
-import {useTypeSelectors} from '../hooks/useTypeSelector'
-import { useActions } from '../hooks/useActions';
-
-
-const ProductList: React.FC = () => {
-  const [term, setTerm] = useState('');
-  const { searchRepositories } = useActions();
-  const {data, error, loading} = useTypeSelectors{
-    (state)=> state.repositories;
-    };
-
-
+type Props ={
+  state: {data: IProduct[], error: string | null, loading: boolean}
+}
+export const ProductList: React.FC<Props> = ({state}:Props) => {
+  const {data, error, loading} = state; 
   return (
-
     <div id='productList'>
       {error && <h3>{error}</h3>}
       {loading && <h3>Loading...</h3>}
-      {!error && !loading && data.map((name:IProduct) => <div key={name.id}>{name}</div>)}
+      {console.log(data)}
+      {!error && !loading && data.map((product:IProduct) => <div key={product.id}>{product}</div>)}
     </div>
   );
 };
-export default ProductList;

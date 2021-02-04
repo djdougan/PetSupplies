@@ -1,27 +1,34 @@
 import React, { useState } from 'react';
-import ProductList from './ProductList';
-import Sidebar from './Sidebar';
-import { useActions } from '../hooks/useActions';
 import { useTypedSelector } from '../hooks/useTypeSelector';
+import {useActions} from '../hooks/useActions'
+import {Sidebar} from './Sidebar';
+import {ProductList} from './ProductList';
+
+
 
 const Container: React.FC=() => {
-  const { data, loading, error } = useTypedSelector(
-      (store) => store.repositories
-  )
+  const [term, setState] = useState('');
+  const {searchRepositories}= useActions();  
+  const {data, error, loading} = useTypedSelector(
+    (state) => state.repositories
+  );
 
-  const [term, setTerm] = useState('');
 
-  const { SearchRepositories } = useActions();
   const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    SearchRepositories(term);
+    searchRepositories(term);
   };
 
-  
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log(e)
+    setState( e.target.value);
+  };
+
     return (
       <div className='container'>
-          <Sidebar state={{ loading, error, data }} />
-          {/* <ProductList state={{ loading, error, data }} /> */}
+          <Sidebar term={term} onSubmit = {onSubmit} onChange = {handleChange} />
+
+          <ProductList state = {{data, loading, error}}/>
       </div>
     );  
 
