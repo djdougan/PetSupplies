@@ -1,4 +1,4 @@
-import { IProductBrand } from './../Interfaces/IProductBrand';
+import { IProductBrand } from '../Interfaces/IProductBrand';
 import { BaseEntity } from './BaseEntity';
 
 export class ProductBrand extends BaseEntity implements IProductBrand{

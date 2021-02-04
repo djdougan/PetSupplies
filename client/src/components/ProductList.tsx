@@ -1,33 +1,24 @@
-import React from 'react';
+import * as React from 'react';
+
 import { useState } from 'react';
+import {useTypeSelectors} from '../hooks/useTypeSelector'
 import { useActions } from '../hooks/useActions';
-import { useTypedSelector } from '../hooks/useTypeSelector';
+
 
 const ProductList: React.FC = () => {
   const [term, setTerm] = useState('');
-  const { getProducts } = useActions();
+  const { searchRepositories } = useActions();
+  const {data, error, loading} = useTypeSelectors{
+    (state)=> state.repositories;
+    };
 
-    const { products, loading, error } = useTypedSelector(
-      (store) => store.repositories
-    );
-
-  const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    getProducts(term);
-  };
 
   return (
-    <div>
-       <form onSubmit={onSubmit}>
-         <button>Search</button>
-       </form>
-         <input value={term} onChange={(e) => setTerm(e.target.value)} />
-       {error && <h3>{error}</h3>}
-       {loading && <h3>Loading...</h3>}
-       {!error && !loading &&
-         products.map((product) => (
-           <div key={product.id}>{product}</div>
-        ))}
+
+    <div id='productList'>
+      {error && <h3>{error}</h3>}
+      {loading && <h3>Loading...</h3>}
+      {!error && !loading && data.map((name:IProduct) => <div key={name.id}>{name}</div>)}
     </div>
   );
 };

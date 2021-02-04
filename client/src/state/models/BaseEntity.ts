@@ -1,4 +1,4 @@
-import { IBaseEntity } from './../Interfaces/IBaseEntity';
+import { IBaseEntity } from '../Interfaces/IBaseEntity';
 
 export class BaseEntity implements IBaseEntity{
     id: number;

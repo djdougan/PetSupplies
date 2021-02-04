@@ -4,17 +4,20 @@ import Header from './Header';
 import Container from './Container';
 import Footer from './Footer';
 
+import '../reset.css';
+import '../App.css';
+
 import { store } from '../store';
 
 const App = () => {
   return (
-      <div>
-    <Provider store={store}>
+    <div className='main'>
+      <Provider store={store}>
         <Header />
         <Container />
         <Footer />
-    </Provider>
-      </div>
+      </Provider>
+    </div>
   );
 };
 

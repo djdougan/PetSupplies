@@ -1,4 +1,4 @@
-import { IProduct } from './../Interfaces/IProduct';
+import { IProduct } from '../Interfaces/IProduct';
 import { BaseEntity } from './BaseEntity';
 import { IProductBrand } from '../Interfaces/IProductBrand';
 import { IProductType } from '../Interfaces/IProductType';

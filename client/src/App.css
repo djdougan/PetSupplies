@@ -1,0 +1,101 @@
+.clear-fix::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+.main {
+  width: 90%;
+  margin: auto;
+}
+
+#productList,
+.footer,
+.header {
+  min-height: 100px;
+}
+
+.footer {
+  min-height: 400px;
+}
+
+.header a,
+.footer a {
+  color: white;
+}
+
+.header,
+.footer,
+#sidebar,
+#productList {
+  padding: 10px 5px 10px;
+}
+
+.header,
+.footer {
+  background-color: #0f3c7e;
+  color: white;
+}
+.nav-bar {
+  display: flex;
+}
+.nav {
+  display: block;
+}
+.nav-item:first-child {
+  margin-left: 25px;
+}
+.nav-item {
+  display: inline-block;
+  width: 150px;
+}
+.brand {
+  width: 100px;
+}
+.brand-logo,
+.brand-text {
+  display: inline;
+}
+.brand-logo {
+  width: 100%;
+}
+.brand-text {
+  word-break: keep-all;
+}
+.container {
+  display: flex;
+}
+
+.container,
+#sidebar,
+#productList {
+  min-height: 600px;
+}
+
+#sidebar,
+#productList,
+#sidebar {
+  display: flex;
+}
+
+#productList,
+#sidebar,
+.header,
+.footer {
+  border: #333 solid 3px;
+  margin: 3px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+#sidebar {
+  background-color: #017f7c;
+  width: 20%;
+}
+
+#productList {
+  width: 80%;
+}
