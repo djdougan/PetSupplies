@@ -1,9 +1,76 @@
+.xx-small {
+  font-size: 0.3em;
+}
+.x-small {
+  font-size: 0.5em;
+}
+.small {
+  font-size: 0.7em;
+}
+.normal {
+  font-size: 1em;
+}
+.medium {
+  font-size: 1.3em;
+}
+.large {
+  font-size: 1.5em;
+}
+.x-large {
+  font-size: 1.7em;
+}
+.xx-large {
+  font-size: 2em;
+}
+.xxx-large {
+  font-size: 2.3em;
+}
+.white{
+  color: #fff;
+}
+
+.wj-blue-bg{
+  background-color: #0f3c7e;
+}
+.wj-blue-fg{
+  color: #0f3c7e;
+}
+.wj-green-bg{
+  background-color: #017f7c;
+}
+.wj-green-fg{
+  color: #017f7c;
+}
+
 .clear-fix::after {
   content: '';
   clear: both;
   display: table;
 }
+.center{
+  text-align: center;
+}
+/* margins */
+.mx-10{
+  margin: 10px;
+}
+.mt-10{
+  margin-top: 10px;
+}
+.mr-10{
+  margin-left: 10px;
+}
+.mb-10{
+  margin-left: 10px;
+}
+.ml-10{
+  margin-left: 10px;
+}
 
+.container{
+  margin: 10px;
+  width: 100%;
+}
 .main {
   width: 90%;
   margin: auto;
@@ -30,11 +97,27 @@
 #productList {
   padding: 10px 5px 10px;
 }
+.sidebar{
+  display: flex;
+  flex-direction: column;
+  width:19%;
+}
+.list{
+  display: block;
+  width: 100%;
+  clear: both
 
-.header,
-.footer {
-  background-color: #0f3c7e;
-  color: white;
+}
+.type-button{
+  border-color: blue;
+  width: 100%;
+  height: 50px;
+
+}
+.brand-button{
+  border-color: red;
+  width: 100%;
+  height: 50px;
 }
 .nav-bar {
   display: flex;
@@ -98,4 +181,49 @@
 
 #productList {
   width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.product-box {
+  /* display: flex; */
+  flex-direction: column;
+  height: 500px;
+  width: 200px;
+  border: #333 solid 2px;
+  margin: 5px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+.product-box-header{
+  height: 100px;
+  margin:0px
+}
+.product-row {
+  display: block;
+  margin: 5px
+}
+.sticky-bottom {
+  align-items: flex-end;
+  display: block;
+}
+.flex-box {
+  display: flex;
+  flex-flow: row;
+}
+.product-box {
+  width: 200px
+}
+.title{
+  text-align: center;
+}
+.product-description {
+  border-top: solid #34554a;
+  margin-top: 10px;
+}
+.thumbnail {
+  width: 100%;
+  height: auto;
 }

@@ -4,10 +4,8 @@ class Footer extends React.Component {
   render() {
     return (
       <div>
-        <footer className='footer'>
-          <div className='container'>
-            
-          </div>
+        <footer className='footer wj-blue-bg'>
+          <div className='container'></div>
         </footer>
       </div>
     );

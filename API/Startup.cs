@@ -43,7 +43,7 @@ namespace PetSupplies
             services.AddControllers();
 
             services.AddCors(options => {
-            options.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());
+            options.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
              });
              
             services.AddSwaggerGen(c =>
@@ -65,12 +65,12 @@ namespace PetSupplies
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "PetSupplies v1"));
             }
 
-            app.UseHttpsRedirection();
+            // app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();
 
-        app.UseCors(AllowOrigin);
+            app.UseCors(AllowOrigin);
 
             app.UseAuthorization();
 

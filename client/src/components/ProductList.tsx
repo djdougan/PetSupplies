@@ -1,18 +1,20 @@
 import * as React from 'react';
-import { IProduct } from '../state/Interfaces/IProduct';
-import { IProductType } from '../state/Interfaces/IProductType';
+import { IProduct } from '../store/Interfaces/IProduct';
+import {Product} from './Product'
 
 type Props ={
-  state: {data: IProduct[], error: string | null, loading: boolean}
+  state: {data:[], error: string | null, loading: boolean}
 }
 export const ProductList: React.FC<Props> = ({state}:Props) => {
   const {data, error, loading} = state; 
+  
   return (
-    <div id='productList'>
+
+    <div id='productList' className="container">
       {error && <h3>{error}</h3>}
-      {loading && <h3>Loading...</h3>}
-      {console.log(data)}
-      {!error && !loading && data.map((product:IProduct) => <div key={product.id}>{product}</div>)}
+      {loading && <h3 className="x-large">Loading...</h3>}
+      {/* {console.log(data, error, loading)} */}
+      {!error && !loading && data.map((product:IProduct) => <div key={product.id}><Product product={product}/></div>)}
     </div>
   );
 };

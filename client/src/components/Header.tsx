@@ -3,7 +3,7 @@ import React from 'react';
 class Header extends React.Component {
   render() {
     return (
-      <div className='header'>
+      <div className='header wj-blue-bg'>
         <nav className='nav-bar'>
           <a className='brand' href='/'>
             <img className='brand-logo' src='logo512.png' alt='brand logo' />

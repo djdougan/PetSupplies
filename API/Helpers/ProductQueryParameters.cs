@@ -8,8 +8,8 @@ namespace API.Helpers{
         public string UPC {get; set;}
         public decimal? MinPrice{ get; set;}
         public decimal? MaxPrice{ get; set;}
-        public string ProductType{get; set;}
-        public string ProductBrand{get; set;}
+        public int? ProductTypeId{get; set;}
+        public int? ProductBrandId{get; set;}
 
     }
 }

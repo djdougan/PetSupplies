@@ -50,13 +50,13 @@ namespace API.Data
                         products = products.Where(x => x.Price >= queryParameters.MinPrice.Value && x.Price <= queryParameters.MaxPrice.Value);
 
                     }
-                    if (queryParameters.ProductBrand != null)
+                    if (queryParameters.ProductBrandId != null)
                     {
-                        products = products.Where(p => p.ProductBrand.Name.ToLower().Contains(queryParameters.ProductBrand.ToLower()));
+                        products = products.Where(p => p.ProductBrand.Id == queryParameters.ProductBrandId);
                     }
-                    if (queryParameters.ProductType != null)
+                    if (queryParameters.ProductTypeId != null)
                     {
-                        products = products.Where(p => p.ProductType.Name.ToLower().Contains(queryParameters.ProductType.ToLower()));
+                        products = products.Where(p => p.ProductType.Id == queryParameters.ProductTypeId);
                     }
                     if (queryParameters.Description != null)
                     {
