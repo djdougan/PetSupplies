@@ -1,0 +1,17 @@
+.Type{
+    min-height: 400px;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+.col-2{
+
+}
+.navbar ul li{
+    display: inline-block;
+    width: 200px;
+    font-size: 1em;
+    line-height: 1.em;
+}

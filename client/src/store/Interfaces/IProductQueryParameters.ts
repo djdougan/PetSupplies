@@ -5,6 +5,6 @@ export interface IProductQueryParameters extends IQueryParameters {
   UPC: string|null;
   MinPrice: number|null;
   MaxPrice: number|null;
-  ProductType: number|null;
-  ProductBrand: number|null;
+  ProductTypeId: number|null;
+  ProductBrandId: number|null;
 }

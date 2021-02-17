@@ -10,9 +10,7 @@ export class Product extends BaseEntity implements IProduct{
     netWeight: string;
     pictureUrl: string;
     price: number;
-    productType: IProductType;
     productTypeId: number;
-    productBrand: IProductBrand;
     productBrandId: number;
     constructor(product: IProduct ){
         super(product.id);
@@ -23,8 +21,6 @@ export class Product extends BaseEntity implements IProduct{
         this.pictureUrl = product.pictureUrl;
         this.price = product.price;
         this.productTypeId = product.productTypeId;
-        this.productType = product.productType;
         this.productBrandId = product.productBrandId;
-        this.productBrand = product.productBrand;
     }
 }

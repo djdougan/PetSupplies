@@ -1,0 +1,9 @@
+.FilterBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+}
+.filter-control{
+    align-content: center;
+}

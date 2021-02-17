@@ -5,5 +5,6 @@ export enum TypeActionType {
   UPDATE_TYPE = 'update_type',
   DELETE_TYPE = 'delete_type',
   TYPE_SUCCESS = 'type_success',
-  TYPE_ERROR = 'type_error',
+  GET_TYPE_BY_ID_SUCCESS = 'get_type_by_id_success',
+  GET_ALL_TYPE_ERROR = 'GET_ALL_TYPE_ERROR',
 }

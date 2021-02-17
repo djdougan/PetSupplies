@@ -5,38 +5,38 @@ import {IProductType} from '../Interfaces/IProductType';
 
 
 const initialState: TypeRepoState = {
-  data: [],
-  loading: false,
-  error: null,
+  type: {id: 0, name:''},
+  isloading: false,
+  err: null,
 };
 
 export interface TypeRepoState {
-  data: IProductType[];
-  loading: boolean;
-  error: string | null;
+  type: IProductType|null;
+  isloading: boolean;
+  err: string | null;
 }
-const typeReducer = (state = initialState, action: TypeAction): TypeRepoState => {
+const typeReducer = (
+  state = initialState,
+  action: TypeAction
+): TypeRepoState => {
   switch (action.type) {
-    case TypeActionType.GET_ALL_TYPE: {
-      return {  loading: true, error: null, data: [] };
-    }
     case TypeActionType.GET_TYPE_BY_ID: {
-      return {  loading: true, error: null, data: [] };
+      return { isloading: true, err: null, type: null };
     }
     case TypeActionType.CREATE_TYPE: {
-      return {  loading: false, error: null, data: [] };
+      return { isloading: false, err: null, type: null };
     }
     case TypeActionType.UPDATE_TYPE: {
-      return {  loading: false, error: null, data: [] };
+      return { isloading: false, err: null, type: null };
     }
     case TypeActionType.DELETE_TYPE: {
-      return {  loading: false, error: null, data: [] };
+      return { isloading: false, err: null, type: null };
     }
-    case TypeActionType.TYPE_SUCCESS: {
-      return {  loading: false, error: null, data: action.payload };
+    case TypeActionType.GET_TYPE_BY_ID_SUCCESS: {
+      return { isloading: false, err: null, type: action.payload };
     }
-    case TypeActionType.TYPE_ERROR: {
-      return {  loading: false, error: action.payload, data: [] };
+    case TypeActionType.GET_ALL_TYPE_ERROR: {
+      return { isloading: false, err: action.payload, type: null };
     }
     default:
       return state;

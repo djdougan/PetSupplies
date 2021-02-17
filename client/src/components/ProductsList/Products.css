@@ -1,0 +1,93 @@
+.Products {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 90%;
+  margin: 0 auto;
+  
+}
+
+.sidebar {
+  width: 20%;
+  flex-direction: column;
+  margin-right: 0;
+}
+.main-content{
+  width: 80%;
+}
+
+.product-list,
+.sidebar {
+  padding: 10px;
+  display: flex;
+  min-height: 600px;
+  border: solid #333 2px;
+  margin: 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.product-list {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+.sidebar h2{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bolder;
+    font-size: 1.3em;
+}
+/* Product Card */
+.Product{align-content: space-around;
+    position: relative;
+    width: 20%;
+    margin:10px ;
+    height: 400px;
+    border: 1px solid #333;
+    border-radius: 10px;;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    overflow: hidden;
+}
+
+.Product img{
+    margin-top: 5px;
+    min-height:150px;
+    width:100%;
+    /* background-image: url('../../../image-coming-soon-ecc.png'); */
+    padding:5px;
+    border-top: solid 2px #333;
+    
+}
+.product-description{
+    padding:5px;
+    max-height: 100px;
+    overflow: hidden;
+}
+.product-description .read-more { 
+  position: absolute; 
+  bottom: 0; 
+  left: 0;
+  width: 100%; 
+  text-align: center; 
+  margin: 0; padding: 30px 0; 
+	
+  /* "transparent" only works here because == rgba(0,0,0,0) */
+  background-image: linear-gradient(to bottom, transparent, black);
+}
+.product-row{
+  display: block;
+}
+.sticky-bottom {
+    position: absolute;
+    bottom:0;
+}

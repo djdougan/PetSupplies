@@ -20,7 +20,6 @@ export const getAllBrands = () => {
 
         const data = await response.json();
 
-      console.log("BRAND", data);
 
       dispatch({
         type: BrandActionType.BRAND_SUCCESS,

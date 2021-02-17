@@ -21,10 +21,10 @@ export class ProductQueryParameters
   public set MinPrice(value: number) {
     this.queryParams.add('MinPrice', value);
   }
-  public set ProductType(value: number) {
-    this.queryParams.add('ProductType', value);
+  public set ProductTypeId(value: number) {
+    this.queryParams.add('ProductTypeId', value);
   }
-  public set ProductBrand(value: number) {
-    this.queryParams.add('ProductBrand', value);
+  public set ProductBrandId(value: number) {
+    this.queryParams.add('ProductBrandId', value);
   }
 }

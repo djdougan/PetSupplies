@@ -10,8 +10,6 @@ export interface IProduct extends IBaseEntity {
   netWeight: string;
   price: number;
   pictureUrl: string;
-  productType: IProductType;
   productTypeId: number;
-  productBrand: IProductBrand;
   productBrandId: number;
 }

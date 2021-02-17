@@ -21,8 +21,12 @@ export interface SearchTypeRepoSuccessAction {
   type: TypeActionType.TYPE_SUCCESS;
   payload: [];
 }
+export interface GetByTypeIdRepoSuccessAction {
+  type: TypeActionType.GET_TYPE_BY_ID_SUCCESS;
+  payload: IProductType;
+}
 export interface SearchTypeRepoErrorAction {
-  type: TypeActionType.TYPE_ERROR;
+  type: TypeActionType.GET_ALL_TYPE_ERROR;
   payload: string;
 }
 
@@ -33,4 +37,5 @@ export type TypeAction =
   | CreateTypeAction
   | DeleteTypeAction
   | SearchTypeRepoSuccessAction
-  | SearchTypeRepoErrorAction;
+  | SearchTypeRepoErrorAction
+  | GetByTypeIdRepoSuccessAction;

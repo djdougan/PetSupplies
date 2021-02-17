@@ -20,10 +20,7 @@ const initialState: ProductRepoState = {
 const productReducer = (state = initialState, action: ProductAction): ProductRepoState => {
   switch (action.type) {
     case ProductActionType.GET_PRODUCT_BY_ID: {
-      return { 
-        loading: true,
-        error: null, data: []
-      };
+      return { loading: true, error: null, data: [] };
     }
     case ProductActionType.CREATE_PRODUCT: {
       return {  loading: false, error: null, data: [] };

@@ -1,0 +1,14 @@
+.Home {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.Home h1{
+    font-size: 2em;
+    margin-top: 20px ;
+    margin-bottom: 20px;
+}
+.Home p{
+    font-size: 1em;
+    line-height: 1.2em;
+}

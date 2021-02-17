@@ -31,15 +31,17 @@ export const searchProducts = (queryParams: IProductQueryParameters) => {
       const url = baseUrl + 'products/' + querySting(queryParams);
       console.log(url);
       const response = await fetch(url,{method:"GET"});
-      console.log(response);
       if (!response.ok) {
+        if(response.status===404){
+        const message = `No Products`;
+        throw new Error(message);
+        }
         const message = `An error has occurred: ${response.status}`;
         throw new Error(message);
       }
 
       const data = await response.json();
 
-      console.log('PRODUCT', data);
 
       dispatch({
         type: ProductActionType.PRODUCT_SUCCESS,
